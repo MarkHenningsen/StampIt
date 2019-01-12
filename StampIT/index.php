@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>StampIt</title>
 	
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
@@ -10,15 +11,14 @@
 
    <link rel="stylesheet" href="css/style.css">
    <link rel="stylesheet" href="css/navbar.css">
-
-
 </head>
 <body>
 
-
+<!-- TOP NAVBAR -->
 <nav class="navbar navbar">
  </nav>
 
+<!-- VENSTRE NAVBAR -->
 <div class="menu-tab">
 
     <div id="one"></div>
@@ -29,7 +29,7 @@
   <nav>
    <div class="profile-section">
       <div class="profile-section-inner">
-         <h4>profil sektion</h3>
+         <h4>profil sektion</h4>
       </div>
       
       </div>
@@ -42,22 +42,34 @@
   </nav>
 </div>
 
+<!-- MØRK INDHOLD DIV -->
+<div class="darken"></div>
+
+<!-- INDHOLD -->
+<div class="container indhold">
+  <?php
+if(!isset($_GET['underside'])){
+include("forside.php");//default load ved første gang siden loades
+}else{
+include($_GET['underside']);
+}
+?>
+  
+</div>
 
 
+<!-- FOOTER -->
+    <div id="footer">
+<div class="container-fluid footericon">
+<div class="row">
+  <div class="col"><a href="index.php?underside=forside.php"><i class="fas fa-home"></i></a></div>
+  <div class="col"><a href="index.php?underside=kupon.php"><i class="fas fa-award"></i></a></div>
+  <div class="col"><i class="fas fa-map-marked-alt"></i></div>
+  <div class="col"><i class="fas fa-user"></i></div>
+</div>
+</div>
+     </div>
 
-<!--
-   <footer class="footer">
-      <div class="container">
-         <div class="row">
-         <div class="col-md-3">HJEM</div>
-         <div class="col-md-3">REWARDS</div>
-         <div class="col-md-3">MAP</div>
-         <div class="col-md-3">PROFILE</div>
-      </div>
-   </div>
-</footer>
-
-!-->
 
 
 
