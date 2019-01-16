@@ -16,7 +16,7 @@ if (isset($_POST['login'])) {
 		exit();
 	}
 	else {
-		$sql = "SELECT * FROM Bruger WHERE Brugernavn=? OR Email=?;";
+		$sql = "SELECT * FROM bruger WHERE Brugernavn=? OR Email=?;";
 		$stmt = mysqli_stmt_init($conn);
 		//Virker database forbindelsen
 		if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -41,7 +41,7 @@ if (isset($_POST['login'])) {
 					$_SESSION['brugerId'] = $row['BrugerId'];
 					$_SESSION['brugerNavn'] = $row['Brugernavn'];
 
-					header("Location: index.php?underside=login.php&login=success");
+					header("Location: index.php?underside=profile.php");
 					exit();
 				}
 				//Hvis den hverken er true eller false

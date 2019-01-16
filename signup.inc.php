@@ -48,7 +48,7 @@ if (isset($_POST['submit'])) {
 	}
 	//Tjek hvis brugernavn er taget
 	else {
-		$sql = "SELECT Brugernavn FROM Bruger WHERE Brugernavn=?";
+		$sql = "SELECT Brugernavn FROM bruger WHERE Brugernavn=?";
 		$stmt = mysqli_stmt_init($conn);
 		if (!mysqli_stmt_prepare($stmt, $sql)) {
 			//Send tilbage hvis sql fejler

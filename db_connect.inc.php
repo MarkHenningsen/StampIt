@@ -1,9 +1,9 @@
 <?php 
 
-$servername = "localhost";
-$dbUsername = "root";
-$dbPassword = "";
-$dbName = "db_stampit";
+$servername = "markh.dk.mysql";
+$dbUsername = "markh_dk_db_stampit";
+$dbPassword = "StampIt";
+$dbName = "markh_dk_db_stampit";
 
 $conn = mysqli_connect($servername, $dbUsername, $dbPassword, $dbName);
 
